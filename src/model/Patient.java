@@ -27,6 +27,13 @@ class Patient
     }
 
 
+    public void showPatient() {
+        System.out.println("Name: " + name);
+        System.out.println("Room: " + room);
+        System.out.println("Phone number: " + phoneNumber);
+    }
+
+
    
 
     
