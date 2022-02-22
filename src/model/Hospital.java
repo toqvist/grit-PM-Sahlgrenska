@@ -21,3 +21,21 @@ public class Hospital {
         }
 
     }
+
+    public Patient getPatient(String name){
+
+        for (int i = 0; i < patients.size(); i++){
+            var patient = patients.get(i);
+            if (patient.getName().equals(name)){
+                return patient;
+            }
+        }
+        System.out.println("Patient not found");
+        return null;
+    }
+
+    public void addPatient (String name, String personalID) {
+        patients.add(new Patient(name, personalID));
+    }
+
+}

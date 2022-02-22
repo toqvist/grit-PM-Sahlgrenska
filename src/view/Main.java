@@ -2,11 +2,14 @@ package view;
 
 import java.util.Scanner;
 
+import model.*;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         
         boolean interfaceLooping = false;
-        
+        Hospital hospital = new Hospital();
+
         //Prompt user for login details, if successfully authenticated send user to menu interface.
         if (login()) {
             interfaceLooping = true;
@@ -17,6 +20,9 @@ public class Main {
 
             System.out.println("Welcome to Sahlgrenska Sjukhus!");
             System.out.println("[1] - Exit Application");
+            System.out.println("[2] - Show patient");
+            System.out.println("[3] - Add patient");
+            System.out.println("[4] - Add patient note");
             
             Scanner scanner = new Scanner(System.in);
             int userInput=0;
@@ -32,13 +38,37 @@ public class Main {
                     
                 case 0: //Do nothing
                     break;
-                case 1:
+                case 1: //Exit
                     interfaceLooping = false;
+                    break;
+                case 2: //Show patient
+                    System.out.println("Input patient name:");
+                    String searchName = scanner.next();
+                    hospital.findPatient(searchName);
+                    break;
+                case 3: //Add patient
+                    System.out.println("Input patient name:");
+                    String patientName = scanner.next();
+                    
+                    System.out.println("Input patient personal ID:");
+                    String personalID = scanner.next();
+
+                    hospital.addPatient(patientName, personalID);
+                    break;
+                case 4: //Add note
+                    System.out.println("Input patient name:");
+                    String inputName = scanner.next();
+
+                    System.out.println("Input patient name:");
+                    String noteToAdd = scanner.next();
+
+                    hospital.getPatient(inputName).addNote(noteToAdd);
+
                     break;
             }
 
             //Wait for user input, so that the console does not become crowded with menu choices.
-            System.out.println("Press any key to continue");
+            System.out.println("[ Press any key to continue ]");
             System.in.read();
         }
     }
