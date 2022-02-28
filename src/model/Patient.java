@@ -53,6 +53,7 @@ public class Patient
         pastConditions.add(condition);
         condition = newCondition;
     }
+
 }
 
    
