@@ -32,4 +32,4 @@ function displaypatienttwo(){
     document.getElementById("name").innerHTML = "Patient två";
     document.getElementById("room").innerHTML = "Rum 2";
     document.getElementById("condition").innerHTML = "lorem"
-}
+} 
