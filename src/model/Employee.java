@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Employee {
 
-    public Employees(String name, String lastName, String password, int workhours, String profession) {
+    public Employee(String name, String lastName, String password, int workhours, String profession) {
         this.name = name;
         this.lastName = lastName;
         this.password = password;
