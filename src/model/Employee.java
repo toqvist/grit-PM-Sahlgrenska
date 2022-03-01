@@ -5,6 +5,14 @@ import java.util.List;
 
 public class Employee {
 
+    public Employees(String name, String lastName, String password, int workhours, String profession) {
+        this.name = name;
+        this.lastName = lastName;
+        this.password = password;
+        this.workhours = workhours;
+        this.profession = profession;
+    }
+
     private String name;
     private String lastName;
     private String password;

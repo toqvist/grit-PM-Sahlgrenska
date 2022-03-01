@@ -6,9 +6,15 @@ import java.util.List;
 public class Hospital {
 
     public List<Patient> patients;
+    private List<Employees> employees;
 
     public Hospital() {
         this.patients = new ArrayList<>();
+        this.employees = new ArrayList<>();
+    }
+
+    public void addEmployee(Employees employee){
+        employees.add(employee);
     }
 
      public void findPatient(String name){
