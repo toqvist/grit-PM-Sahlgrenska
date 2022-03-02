@@ -13,14 +13,16 @@ public class Patient
     
     private List<String> notes;
    
-    private List<MedicalCondition> mcList;
+    private String condition;
+    private List<String> pastConditions;
 
     public Patient(String name, String personalID) 
     {
         this.name = name;
         this.personalID = personalID;
+        this.condition = condition;
 
-        mcList = new ArrayList<MedicalCondition>();
+        pastConditions = new ArrayList<String>();
         notes = new ArrayList<String>();
     }  
 
@@ -45,6 +47,13 @@ public class Patient
         notes.add(note);
 
     }
+
+    //Change current condition, add old condition to list of past conditions
+    public void changeCondtion (String newCondition) {
+        pastConditions.add(condition);
+        condition = newCondition;
+    }
+
 }
 
    
