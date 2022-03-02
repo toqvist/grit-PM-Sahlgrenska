@@ -14,22 +14,3 @@ loginButton.addEventListener("click", (e) => {
     }
 })
 
-const patientOne = document.getElementById("patient-1");
-const patientTwo = document.getElementById("patientTwo");
-patientOne.addEventListener("click", displaypatientone);
-
-
-
-patientTwo.addEventListener("click", displaypatienttwo);
-
-function displaypatientone(){
-    document.getElementById("name").innerHTML = "Patient ett";
-    document.getElementById("room").innerHTML = "Rum 1";
-    document.getElementById("condition").innerHTML = "lorem"
-}
-
-function displaypatienttwo(){
-    document.getElementById("name").innerHTML = "Patient två";
-    document.getElementById("room").innerHTML = "Rum 2";
-    document.getElementById("condition").innerHTML = "lorem"
-}
